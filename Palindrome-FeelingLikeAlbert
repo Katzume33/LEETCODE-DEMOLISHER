@@ -6,7 +6,9 @@ class Solution {
         
         while(beginning < ending){  // check that while the begnning of the string is less than the ending if will loop until the string with value x is empty
             if(palindrome.charAt(beginning++) != palindrome.charAt(ending--)) 
-                // this two pointers are going to alternate when in the case of 121 it will check the beginning which is 1 and and the ending 1 if they they                    match return true else return false same with 2 since the beginning is incrementing and the ending is decreasing they will both read the                      number 2 which return true as well and so on
+                // this two pointers are going to alternate when in the case of 121 it will check the beginning which is 1 and and the ending 1 if they they         
+                match return true else return false same with 2 since the beginning is incrementing and the ending is decreasing they will both read the                    
+                number 2 which return true as well and so on
                 return false;
         }
         return true;
