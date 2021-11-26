@@ -1,0 +1,29 @@
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        
+        StringBuilder longestPrefix = new StringBuilder();
+        
+        if(strs == null || strs.length == 0){
+            return longestPrefix.toString();
+        }
+        int min = strs[0].length();
+        //Min length of the string
+        for(int i = 1; i < strs.length; i++){
+            min = Math.min(min,strs[i].length());
+        }
+        //Loop for  a min length
+        for(int j = 0; j < min; j++){
+            //Get the current character of the string
+            char current = strs[0].charAt(j);
+        
+        //Checkf if this char is founding in the other strings
+        for(String str: strs){
+            if(str.charAt(j)!= current){
+                return longestPrefix.toString();
+            }
+        }
+        longestPrefix.append(current);
+        }
+    return longestPrefix.toString();
+    }
+}
